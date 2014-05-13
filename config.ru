@@ -1,14 +1,12 @@
 require './app'
 run Sinatra::Application
 
-Mail.defaults do
-  delivery_method :smtp, {
-    :address => 'smtp.sendgrid.net',
-    :port => 587,
-    :domain => 'http://localhost:9393',
-    :user_name => 'postmaster@sandbox9e40982438de4c218c126056aa8f25ea.mailgun.org',
-    :password => '7u2yp3x6t6w9',
-    :authentication => 'plain',
-    :enable_starttls_auto => true
-  }
-end
+ActionMailer::Base.smtp_settings = {
+  :port           => ENV['MAILGUN_SMTP_PORT'],
+  :address        => ENV['MAILGUN_SMTP_SERVER'],
+  :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+  :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+  :domain         => 'yourapp.heroku.com',
+  :authentication => :plain,
+}
+ActionMailer::Base.delivery_method = :smtp
