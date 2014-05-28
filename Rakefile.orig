@@ -1,0 +1,37 @@
+<<<<<<< HEAD
+require 'nokogiri'
+require 'open-uri'
+require 'mailgun'
+require './lib/scraping.rb'
+require './lib/messaging.rb'
+
+
+task :check_tweet_time do
+  @twitter_nokogiri = TwitterNokogiri.new("https://twitter.com/vicfriedman")
+  normal_tweeted_time = Time.at(@twitter_nokogiri.tweet_time.to_i)
+  if normal_tweeted_time > Time.now - 10*60
+    @sending_emails = SendingTweets.new
+    @sending_emails.email_tweets
+  else  
+    puts "No new tweets"
+  end
+end
+=======
+require'./lib/twitter_nokogiri'
+require 'open-uri'
+require 'nokogiri'
+require 'mailgun'
+require './lib/sending_emails'
+
+task :check_tweet_time do 
+  @twitter_nokogiri = TwitterNokogiri.new("https://twitter.com/jmburges")
+  tweeted_time = @twitter_nokogiri.get_tweets_time
+  normal_tweeted_time = Time.at(tweeted_time.to_i)
+  if normal_tweeted_time > Time.now - 10*60
+    @sending_emails = SendingEmail.new
+    @sending_emails.send_tweet_email
+  else  
+    puts "No new tweets"
+  end
+end
+>>>>>>> 688569c6fda2be781d3da835ea890d71185e07ce
