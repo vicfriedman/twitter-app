@@ -4,11 +4,12 @@ require 'open-uri'
 
   def initialize(doc)
     @doc = Nokogiri::HTML(open("#{doc}"))
+    @tweet_text  = self.get_tweets_text
   end
 
   def get_tweets_text # Search for nodes by css
-    tweets = @doc.css("p.js-tweet-text").first.text
-    tweets 
+    tweet_text = @doc.css("p.js-tweet-text").first.text
+    tweet_text
   end
 
   def get_tweets_time
