@@ -1,8 +1,8 @@
 require 'nokogiri'
 require 'open-uri'
 require 'mailgun'
-require './lib/scraping.rb'
-require './lib/messaging.rb'
+require './lib/sending_emails.rb'
+require './lib/twitter_nokogiri.rb'
 
 
 task :check_tweet_time do
