@@ -1,0 +1,17 @@
+.center-text{
+  text-align: center;
+}
+
+.page-header {
+  background-color: #E80C61;
+  color: white;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 0px;
+  left: 0px;
+}
+
+#small-text {
+  color: white;
+}
+

@@ -1,9 +1,47 @@
-<h1> this is joe's most recent tweet</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/style.css"> 
 
-<h2>TWEET:</h2>
-<p><%=@tweets %></p>
-<h2> He tweeted it at:</h2>
-<p><%= Time.at(@tweeted_time.to_i) %> </p>
+  </head>
+  <body>
+
+      <div class="center-text page-header">
+        <h1> Stalking Joe Burgess
+        <br>
+       <small id="small-text">...through his Twitter account </small></h1>
+      </div>
+    <div class="container">
+      <div class="center-text">
+        <h3> In case you were wondering, this is Joe Burgess.</h3>
+        <img src="images/joe_burgess.jpg" alt="joe picks apples" height="400px">
+      </div>
+
+          this is joe's most recent tweet</h1>
+
+        <h2>TWEET:</h2>
+        <p><%=@tweets %></p>
+        <h2> He tweeted it at:</h2>
+        <p><%= Time.at(@tweeted_time.to_i) %> </p>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
 
 
 
