@@ -2,9 +2,9 @@ require 'open-uri'
 
  class TwitterNokogiri
 
-  def initialize(doc)
-    @doc = Nokogiri::HTML(open("#{doc}"))
-    @tweet_text  = self.get_tweets_text
+  def initialize
+    @doc = Nokogiri::HTML(open("https://twitter.com/jmburges"))
+    @tweet_text  = @doc.css("p.js-tweet-text").first.text
     @tweet_time = self.get_tweets_time
   end
 
@@ -43,3 +43,9 @@ require 'open-uri'
   end
 
 end
+
+tweet = TwitterNokogiri.new
+
+tweet.tweet_time #=> "oiqwjoifawhg"
+tweet.tweet_text #=> ""
+

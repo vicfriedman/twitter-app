@@ -1,4 +1,5 @@
 require 'mailgun'
+require_relative "twitter_nokogiri.rb"
 class SendingEmail
 
   Mailgun.configure do |config|
@@ -13,7 +14,7 @@ class SendingEmail
     :to => "victoria.m.friedman@gmail.com",
     :subject => "JOE TWEETED",
     :text => "HERE'S JOE'S TWEET: #{@tweets}",
-    :from => "victoria.m.friedman@gmail.com"
+    :from => "postmaster@sandbox9e40982438de4c218c126056aa8f25ea.mailgun.org"
     }
     @mailgun = Mailgun()
     @mailgun.messages.send_email(parameters)
