@@ -13,26 +13,40 @@
 
   </head>
   <body>
-
-      <div class="center-text page-header">
-        <h1> Stalking Joe Burgess
-        <br>
-       <small id="small-text">...through his Twitter account </small></h1>
-      </div>
-    <div class="container">
-      <div class="center-text">
-        <h3> In case you were wondering, this is Joe Burgess.</h3>
+    <div class="page-header center-text">
+      <h1 id="small-h1"> Stalking Joe Burgess
+      <br>
+     <small id="small-text">...through his Twitter account </small></h1>
+    </div>
+    <div class="center-text" id="picture-box">
+      <div id="picture">
+        <h2 id="h3-padding"> In case you were wondering, this is Joe Burgess.</h2>
         <img src="images/joe_burgess.jpg" alt="joe picks apples" height="400px">
       </div>
-
-          this is joe's most recent tweet</h1>
-
-        <h2>TWEET:</h2>
-        <p><%=@tweets %></p>
-        <h2> He tweeted it at:</h2>
-        <p><%= Time.at(@tweeted_time.to_i) %> </p>
-
     </div>
+    <div class="main">
+      <h2 id="fact-title">And because we all love weird facts, here are some about Joe...</h2>
+      <div class="facts col-md-6" id="eating">
+        <img src="images/eating.png">
+      </div>
+      <div class="facts col-md-6">
+        <div id="actual-facts">
+          <ul>
+            <li>He can wiggle both ears independantly of each other</li>
+            <li>He has an adult tooth that is the same size as a baby tooth. Guess which one?</li>
+            <li> He loves food wrapped in food, like dumplings</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+      <!-- <div class="col-6-md">
+        <h2>TWEET:</h2>
+        <p><%#=@tweets %></p>
+        <h2> He tweeted it at:</h2>
+        <p><%#= Time.at(@tweeted_time.to_i) %> </p>
+      </div> -->
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
