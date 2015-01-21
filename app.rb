@@ -4,6 +4,7 @@ require './lib/twitter_nokogiri'
 
 class MyApp < Sinatra::Base
   get "/" do
+	puts "IT WORKS"
     @tweets = TwitterNokogiri.new
     erb :index
   end
