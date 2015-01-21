@@ -34,17 +34,34 @@
     <div class="facts col-md-6" id="eating">
       <img src="images/eating.png">
     </div>
-    <div class="facts col-md-6">
-     <div id="actual-facts">
-        <ul>
-          <li>He can wiggle both ears independantly of each other</li>
-          <li>He has an adult tooth that is the same size as a baby tooth. Guess which one?</li>
-          <li> He loves food wrapped in food, like dumplings</li>
-        </ul>
-      </div> <!-- ends actual-facts -->
-    </div> <!-- ends facts -->
+    <div class="row">
+      <div class="facts col-md-6">
+       <div id="actual-facts">
+          <ul>
+            <li>He can wiggle both ears independantly of each other</li>
+            <li>He has an adult tooth that is the same size as a baby tooth. Guess which one?</li>
+            <li> He loves food wrapped in food, like dumplings</li>
+          </ul>
+        </div> <!-- ends actual-facts -->
+      </div> <!-- ends facts -->
+    </div>
+     <!-- ends row -->
     
-    <h1> HIIII</h1>
+    <div class="row orange" id="tall">
+      <h2 class="tweet-title">
+        And now, what you've all be waiting for, Joe's tweets
+      </h2>
+      <div class="col-md-4 orange tweet-text">
+        <p class="tweeting"><%= @tweets.first_tweet_text %></p>
+      </div>
+      <div class="col-md-4 orange tweet-text">
+        <p class="tweeting"><%= @tweets.second_tweet_text %></p>
+      </div>
+      <div class="col-md-4 orange tweet-text">
+        <p class="tweeting"><%= @tweets.third_tweet_text %></p>
+      </div>
+    </div>
+    <!-- ends row -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

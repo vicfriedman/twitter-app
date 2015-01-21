@@ -66,21 +66,33 @@ body {
   background-color: #FF610D;
 }
 
-.tweet-size{
-  font-size: 15px;
-  padding-top: 10px;
-  height: 200px;
+.tweet-title{
+  color: white;
+  padding-top: 25px;
 }
 
+.tweet-text{
+  color: white;
+  font-size: 15px;
+  margin-top: 30px;
+  border-style: solid;
+  border-size: 5px;
+  border-color: white;
+  height: 200px;
+}
+.tweeting{
+  padding-top: 12%;
+  vertical-align: middle;
+
+}
+
+#tall {
+  height: 500px;
+}
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0px;
   margin-bottom: 0px;
   text-align: center;
-}
-
-#tweets {
-  padding-top: 15px;
-  background-color:#FF610D ;
 }
 
 ul {
@@ -91,14 +103,6 @@ ul li:before {
    content: "♥";
    font-size: 190%; /* or whatever */
    padding-right: 5px;
-}
-
-.col-md-1 {
-  width: 100%;
-}
-
-#tweet-title {
-  padding-top: 15px;
 }
 
 .fact-title {
