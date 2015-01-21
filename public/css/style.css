@@ -55,14 +55,32 @@ body {
   padding-top: 15px;
   height: 350px;
   text-align: center;
+  display: block;
 }
 
 .main {
   background-color: #7700FF;
 }
 
+.orange {
+  background-color: #FF610D;
+}
+
+.tweet-size{
+  font-size: 15px;
+  padding-top: 10px;
+  height: 200px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+#tweets {
+  padding-top: 15px;
+  background-color:#FF610D ;
 }
 
 ul {
@@ -74,3 +92,19 @@ ul li:before {
    font-size: 190%; /* or whatever */
    padding-right: 5px;
 }
+
+.col-md-1 {
+  width: 100%;
+}
+
+#tweet-title {
+  padding-top: 15px;
+}
+
+.fact-title {
+  padding-top: 20px;
+}
+
+
+
+

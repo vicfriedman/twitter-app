@@ -4,9 +4,7 @@ require './lib/twitter_nokogiri'
 
 class MyApp < Sinatra::Base
   get "/" do
-    @twitter_nokogiri = TwitterNokogiri.new
-    @tweets = @twitter_nokogiri.get_tweets_text
-    @tweeted_time = @twitter_nokogiri.get_tweets_time
+    @tweets = TwitterNokogiri.new
     erb :index
   end
 end

@@ -1,11 +1,14 @@
 require 'open-uri'
 
  class TwitterNokogiri
+  attr_reader :first_tweet_text, :second_tweet_text, :third_tweet_text
 
   def initialize
     @doc = Nokogiri::HTML(open("https://twitter.com/jmburges"))
-    @tweet_text  = @doc.css("p.js-tweet-text").first.text
-    @tweet_time = self.get_tweets_time
+    @first_tweet_text  = @doc.css("p.js-tweet-text").first.text
+    @first_tweet_time = self.get_tweets_time
+    @second_tweet_text = @doc.css("p.js-tweet-text")[1].text
+    @third_tweet_text =  @doc.css("p.js-tweet-text")[2].text
   end
 
   def get_tweets_text # Search for nodes by css
